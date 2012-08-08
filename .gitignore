@@ -1,0 +1,23 @@
+# Submission paperwork
+paperwork/
+
+# OSX files
+.DS_Store
+
+# LaTeX files
+*.600pk
+*.aux
+*.bbl
+*.blg
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.tfm
+*.toc
+chapters/*/*-eps-converted-to.pdf
+comment.cut
+thesis*.pdf

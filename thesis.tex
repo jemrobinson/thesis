@@ -1,0 +1,54 @@
+\documentclass[final]{uclthesis} %final draft web
+\RequirePackage{uclthesis}
+
+% PDF metadata
+\makeatletter
+\@ifpackageloaded{hyperref}{%
+  \hypersetup{%
+    pdftitle = {Jet physics with the \ATLAS experiment at the \LHC},
+    pdfsubject = {James Robinson's PhD thesis},
+    pdfkeywords = {ATLAS, forward, jet, physics, LHC},
+    pdfauthor = {\textcopyright\ James Robinson}
+  }
+}{}
+\makeatother
+
+%% Define the thesis title and author
+\title{Jet physics with the \ATLAS experiment at the \LHC}
+\author{James Edward Martyn Robinson\xspace}
+\date{March 28th, 2012}
+
+%% Start the document
+\begin{document}
+
+%% Define the un-numbered front matter (cover pages, rubric and table of contents)
+\begin{frontmatter}
+  \input{structure/frontmatter}
+\end{frontmatter}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+  \include{chapters/bg-theory/chapter.bg-theory}
+  \include{chapters/detector/chapter.detector}
+  \include{chapters/analysis-tools/chapter.analysis-tools}
+  \include{chapters/eta-intercalibration/chapter.eta-intercalibration}
+  \include{chapters/forward-inclusive/chapter.forward-inclusive}
+  \include{chapters/dijets/chapter.dijets}
+  \include{chapters/gbj/chapter.gbj}
+  \include{chapters/azimuthal-decorrelation/chapter.azimuthal-decorrelation}
+  \include{chapters/conclusions/chapter.conclusions}
+\end{mainmatter}
+
+%% Produce the appendices if there are any
+\begin{appendices}
+  \include{structure/appendices}
+\end{appendices}
+
+%% Produce the un-numbered back matter (e.g. colophon,
+%% bibliography, tables of figures etc., index...)
+\begin{backmatter}
+  \include{structure/backmatter}
+\end{backmatter}
+
+%% Close
+\end{document}

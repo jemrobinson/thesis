@@ -1,0 +1,21 @@
+% discompton1.mf -- do not edit, generated automatically by thesis.tex
+input feynmf
+require_RCS_revision "1.30";
+beginchar(1, 40*1.0pt#, 20*1.0pt#, 0);
+"feynmf: 1";
+LaTeX_unitlength:=1.0pt;
+subgraph (0, 0, w, h);
+vinit;
+pickup pencircle scaled thin;
+pickup pencircle scaled thin;
+vleft (__iq, __ip);
+vright (__oq);
+vconnect ("photon", __ip, __v1);
+vconnect ("plain", __iq, __v1, __oq);
+vfreeze;
+vdraw;
+endsubgraph;
+endchar;
+% the end.
+end.
+endinput;
