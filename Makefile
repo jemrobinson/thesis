@@ -1,18 +1,22 @@
 # Author: James Robinson
 
-MAINFILE = thesis
+MAINFILE := thesis
 
-.PHONY: all
-all: $(MAINFILE).pdf
-
+# Note that the initial pdflatex command will fail but creates the required metafont files
+# We therefore ignore its return code and continue on
 $(MAINFILE).pdf: $(MAINFILE).tex
+	pdflatex $(MAINFILE) || true
 	pdflatex $(MAINFILE)
 	bibtex $(MAINFILE)
 	pdflatex $(MAINFILE)
 	pdflatex $(MAINFILE)
 
+.PHONY: all
+all: $(MAINFILE).pdf
+
 .PHONY: clean
 clean:
+	-rm -f *.600gf
 	-rm -f *.600pk
 	-rm -f *.aux
 	-rm -f *.bbl
@@ -23,6 +27,7 @@ clean:
 	-rm -f *.lof
 	-rm -f *.log
 	-rm -f *.lot
+	-rm -f *.mf
 	-rm -f *.out
 	-rm -f *.tfm
 	-rm -f *.toc

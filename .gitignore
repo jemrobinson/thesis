@@ -15,6 +15,7 @@ paperwork/
 *.lof
 *.log
 *.lot
+*.mf
 *.out
 *.tfm
 *.toc
